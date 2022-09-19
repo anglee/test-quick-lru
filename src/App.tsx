@@ -1,8 +1,12 @@
 import React from 'react';
+import QuickLRU from "quick-lru";
 import logo from './logo.svg';
 import './App.css';
 
+const cache = new QuickLRU<string, string>({maxSize: 100});
+
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
